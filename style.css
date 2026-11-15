@@ -399,3 +399,76 @@ footer p {
     }
 
 }
+
+/* =================================
+   MENUS DÉROULANTS
+================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/* Conteneur du menu déroulant */
+
+.menu-deroulant {
+    position: relative;
+}
+
+/* Bouton principal */
+
+.menu-deroulant > a {
+    display: block;
+    padding: 10px 12px;
+    color: #E2E8F0;
+    font-weight: bold;
+}
+
+/* Sous-menu */
+
+.sous-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    background-color: #17243A;
+    border: 1px solid #38BDF8;
+    border-radius: 6px;
+    padding: 8px 0;
+    z-index: 1000;
+}
+
+/* Liens du sous-menu */
+
+.sous-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #E2E8F0;
+    white-space: nowrap;
+}
+
+/* Survol des liens */
+
+.sous-menu a:hover {
+    background-color: #0284C7;
+    color: #FFFFFF;
+}
+
+/* Affichage du sous-menu au survol */
+
+.menu-deroulant:hover .sous-menu {
+    display: block;
+}
+
+/* Accessibilité au clavier */
+
+.menu-deroulant:focus-within .sous-menu {
+    display: block;
+}
