@@ -1,8 +1,10 @@
-/* =========================================
-   1. STYLE GENERAL
-========================================= */
+/* =====================================================
+   1. CONFIGURATION GÉNÉRALE
+   ===================================================== */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -11,426 +13,80 @@ html {
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #0B1120;
     color: #E2E8F0;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
     line-height: 1.7;
+    font-size: 16px;
 }
 
-/* =========================================
-   2. BARRE DE NAVIGATION
-========================================= */
+/* =====================================================
+   2. EN-TÊTE
+   ===================================================== */
 
 header {
     background-color: #111C30;
-    border-bottom: 1px solid #263750;
-    padding: 15px 40px;
+    padding: 25px 8%;
+    border-bottom: 2px solid #1E3A5F;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav h2 {
+header h1 {
     color: #38BDF8;
-    margin: 0;
-    font-size: 23px;
-    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 5px;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #E2E8F0;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #38BDF8;
-}
-
-/* =========================================
-   3. SECTIONS
-========================================= */
-
-section {
-    padding: 60px 40px;
-}
-
-h1, h2 {
-    color: #38BDF8;
-}
-
-h1 {
-    font-size: 38px;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 28px;
-    margin-bottom: 25px;
-}
-
-p {
-    color: #CBD5E1;
-    font-size: 16px;
-}
-
-/* =========================================
-   4. SECTION ACCUEIL
-========================================= */
-
-#accueil {
-    text-align: center;
-    padding: 100px 40px;
-    background-color: #111C30;
-}
-
-#accueil p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 18px;
-}
-
-/* =========================================
-   5. CARTES
-========================================= */
-
-.conteneur-cartes {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.carte {
-    background-color: #17243A;
-    border: 1px solid #2B405E;
-    border-radius: 12px;
-    padding: 28px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.carte:hover {
-    transform: translateY(-5px);
-    border-color: #38BDF8;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.carte h3 {
-    color: #7DD3FC;
-    font-size: 21px;
-    margin-top: 0;
-}
-
-.carte p {
-    color: #CBD5E1;
-    font-size: 16px;
-}
-
-/* =========================================
-   6. BOUTONS
-========================================= */
-
-.bouton {
-    display: inline-block;
-    background-color: #0284C7;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 7px;
-    font-weight: bold;
-    margin-top: 12px;
-    transition: background-color 0.3s ease,
-                transform 0.3s ease;
-}
-
-.bouton:hover {
-    background-color: #0369A1;
-    transform: translateY(-2px);
-}
-
-/* =========================================
-   7. PIED DE PAGE
-========================================= */
-
-footer {
-    background-color: #070D19;
-    border-top: 1px solid #263750;
-    text-align: center;
-    padding: 25px;
-}
-
-footer p {
-    color: #94A3B8;
-    margin: 0;
-}
-
-/* =========================================
-   8. ADAPTATION AUX TELEPHONES
-========================================= */
-
-@media (max-width: 768px) {
-
-    header {
-        padding: 15px 20px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    section {
-        padding: 40px 20px;
-    }
-
-    #accueil {
-        padding: 65px 20px;
-    }
-
-    h1 {
-        font-size: 29px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-   /* =========================================
-   9. AMELIORATION DE LA SECTION ACCUEIL
-========================================= */
-
-#accueil h1 {
-    max-width: 950px;
-    margin: 15px auto 25px;
-    font-size: 42px;
-    line-height: 1.3;
-}
-
-.sous-titre {
-    color: #38BDF8;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-#accueil > p:not(.sous-titre) {
-    max-width: 750px;
-    margin: 0 auto;
-    font-size: 18px;
-}
-
-.actions-accueil {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.bouton-secondaire {
-    background-color: transparent;
-    border: 1px solid #38BDF8;
-    color: #38BDF8;
-}
-
-.bouton-secondaire:hover {
-    background-color: #17243A;
-    color: #FFFFFF;
-}
-
-/* Adaptation aux petits écrans */
-
-@media (max-width: 768px) {
-
-    #accueil h1 {
-        font-size: 30px;
-    }
-
-    #accueil > p:not(.sous-titre) {
-        font-size: 16px;
-    }
-
-    .actions-accueil {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .actions-accueil .bouton {
-        width: 100%;
-        max-width: 280px;
-        text-align: center;
-    }
-}
-
-    .conteneur-cartes {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* =========================================
-   10. EXPERIENCES PROFESSIONNELLES
-========================================= */
-
-.conteneur-experiences {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.experience {
-    background-color: #17243A;
-    border: 1px solid #2B405E;
-    border-left: 4px solid #38BDF8;
-    border-radius: 10px;
-    padding: 25px;
-    transition: transform 0.3s ease,
-                border-color 0.3s ease;
-}
-
-.experience:hover {
-    transform: translateY(-5px);
-    border-color: #38BDF8;
-}
-
-.experience-date {
-    color: #38BDF8;
-    font-weight: bold;
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.experience h3 {
-    color: #7DD3FC;
-    font-size: 21px;
-    margin: 5px 0;
-}
-
-.experience h4 {
-    color: #E2E8F0;
-    font-size: 16px;
-    margin: 5px 0 15px;
-}
-
-.experience ul {
-    padding-left: 20px;
-}
-
-.experience li {
+header p {
     color: #CBD5E1;
     font-size: 15px;
-    margin-bottom: 10px;
 }
 
-/* ADAPTATION AUX TELEPHONES */
-
-@media (max-width: 768px) {
-
-    .conteneur-experiences {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-/* =========================================
-   11. CERTIFICATIONS ET FORMATIONS
-========================================= */
-
-.titre-categorie {
-    color: #7DD3FC;
-    font-size: 22px;
-    margin-top: 45px;
-    margin-bottom: 20px;
-    padding-left: 15px;
-    border-left: 4px solid #38BDF8;
-}
-
-/* BADGE DES CERTIFICATIONS EXPIREES */
-
-.statut-expire {
-    display: inline-block;
-    background-color: #422B32;
-    color: #FCA5A5;
-    border: 1px solid #7F1D1D;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* ESPACEMENT DES CARTES */
-
-#certifications .conteneur-cartes {
-    margin-bottom: 35px;
-}
-
-/* ADAPTATION AUX PETITS ECRANS */
-
-@media (max-width: 768px) {
-
-    .titre-categorie {
-        font-size: 19px;
-        margin-top: 35px;
-    }
-
-}
-
-/* =================================
-   MENUS DÉROULANTS
-================================= */
+/* =====================================================
+   3. NAVIGATION PRINCIPALE
+   ===================================================== */
 
 nav {
     display: flex;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 nav a {
     text-decoration: none;
 }
 
-/* Conteneur du menu déroulant */
+nav > a {
+    color: #E2E8F0;
+    font-weight: bold;
+    padding: 10px 12px;
+    transition: 0.3s;
+}
+
+nav > a:hover {
+    color: #38BDF8;
+}
+
+/* =====================================================
+   4. MENUS DÉROULANTS
+   ===================================================== */
 
 .menu-deroulant {
     position: relative;
 }
-
-/* Bouton principal */
 
 .menu-deroulant > a {
     display: block;
     padding: 10px 12px;
     color: #E2E8F0;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-/* Sous-menu */
+.menu-deroulant > a:hover {
+    color: #38BDF8;
+}
 
 .sous-menu {
     display: none;
@@ -443,32 +99,336 @@ nav a {
     border-radius: 6px;
     padding: 8px 0;
     z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
-
-/* Liens du sous-menu */
 
 .sous-menu a {
     display: block;
     padding: 10px 15px;
     color: #E2E8F0;
     white-space: nowrap;
+    transition: 0.3s;
 }
-
-/* Survol des liens */
 
 .sous-menu a:hover {
     background-color: #0284C7;
     color: #FFFFFF;
 }
 
-/* Affichage du sous-menu au survol */
-
 .menu-deroulant:hover .sous-menu {
     display: block;
 }
 
-/* Accessibilité au clavier */
-
 .menu-deroulant:focus-within .sous-menu {
     display: block;
+}
+
+/* =====================================================
+   5. CONTENU PRINCIPAL
+   ===================================================== */
+
+main {
+    width: 84%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+section {
+    margin-bottom: 55px;
+}
+
+h2 {
+    color: #38BDF8;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #7DD3FC;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* =====================================================
+   6. PAGE D'ACCUEIL
+   ===================================================== */
+
+#accueil {
+    padding: 45px 35px;
+    background-color: #111C30;
+    border-left: 4px solid #38BDF8;
+    border-radius: 8px;
+}
+
+#accueil h2 {
+    font-size: 32px;
+}
+
+.sous-titre {
+    color: #7DD3FC;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.actions-accueil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* =====================================================
+   7. BOUTONS
+   ===================================================== */
+
+.bouton {
+    display: inline-block;
+    background-color: #0284C7;
+    color: #FFFFFF;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.bouton:hover {
+    background-color: #0369A1;
+    transform: translateY(-2px);
+}
+
+.bouton-secondaire {
+    display: inline-block;
+    background-color: transparent;
+    color: #38BDF8;
+    padding: 11px 21px;
+    border: 1px solid #38BDF8;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.bouton-secondaire:hover {
+    background-color: #17243A;
+}
+
+/* =====================================================
+   8. CARTES ET GRILLES
+   ===================================================== */
+
+.grille-projets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.carte {
+    background-color: #17243A;
+    padding: 25px;
+    border: 1px solid #263B59;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.carte:hover {
+    transform: translateY(-5px);
+    border-color: #38BDF8;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.carte p {
+    color: #CBD5E1;
+}
+
+.carte a {
+    color: #38BDF8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.carte a:hover {
+    color: #7DD3FC;
+    text-decoration: underline;
+}
+
+/* =====================================================
+   9. LISTES
+   ===================================================== */
+
+ul,
+ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* =====================================================
+   10. LIENS GÉNÉRAUX
+   ===================================================== */
+
+main a {
+    color: #38BDF8;
+}
+
+main a:hover {
+    color: #7DD3FC;
+}
+
+/* =====================================================
+   11. BADGES ET CERTIFICATIONS
+   ===================================================== */
+
+.badge {
+    display: inline-block;
+    background-color: #123B5A;
+    color: #7DD3FC;
+    padding: 6px 12px;
+    margin: 5px;
+    border: 1px solid #0284C7;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* =====================================================
+   12. EXPÉRIENCES PROFESSIONNELLES
+   ===================================================== */
+
+.experience {
+    background-color: #17243A;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-left: 4px solid #0284C7;
+    border-radius: 6px;
+}
+
+.experience h3 {
+    margin-bottom: 5px;
+}
+
+.experience .periode {
+    color: #7DD3FC;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* =====================================================
+   13. FORMULAIRES
+   ===================================================== */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    background-color: #17243A;
+    color: #E2E8F0;
+    border: 1px solid #38516F;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #38BDF8;
+}
+
+/* =====================================================
+   14. PIED DE PAGE
+   ===================================================== */
+
+footer {
+    background-color: #070D19;
+    color: #94A3B8;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 60px;
+    border-top: 1px solid #1E3A5F;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* =====================================================
+   15. ADAPTATION AUX ÉCRANS MOBILES
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav > a,
+    .menu-deroulant > a {
+        padding: 8px 10px;
+    }
+
+    .menu-deroulant {
+        width: 100%;
+    }
+
+    .sous-menu {
+        position: static;
+        width: 100%;
+        min-width: auto;
+        margin-left: 10px;
+        box-shadow: none;
+    }
+
+    .sous-menu a {
+        white-space: normal;
+    }
+
+    main {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    #accueil {
+        padding: 25px 20px;
+    }
+
+    #accueil h2 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .actions-accueil {
+        flex-direction: column;
+    }
+
+    .bouton,
+    .bouton-secondaire {
+        text-align: center;
+    }
+
+    .grille-projets {
+        grid-template-columns: 1fr;
+    }
 }
