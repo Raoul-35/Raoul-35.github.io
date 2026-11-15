@@ -289,3 +289,69 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   10. EXPERIENCES PROFESSIONNELLES
+========================================= */
+
+.conteneur-experiences {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.experience {
+    background-color: #17243A;
+    border: 1px solid #2B405E;
+    border-left: 4px solid #38BDF8;
+    border-radius: 10px;
+    padding: 25px;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.experience:hover {
+    transform: translateY(-5px);
+    border-color: #38BDF8;
+}
+
+.experience-date {
+    color: #38BDF8;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.experience h3 {
+    color: #7DD3FC;
+    font-size: 21px;
+    margin: 5px 0;
+}
+
+.experience h4 {
+    color: #E2E8F0;
+    font-size: 16px;
+    margin: 5px 0 15px;
+}
+
+.experience ul {
+    padding-left: 20px;
+}
+
+.experience li {
+    color: #CBD5E1;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* ADAPTATION AUX TELEPHONES */
+
+@media (max-width: 768px) {
+
+    .conteneur-experiences {
+        grid-template-columns: 1fr;
+    }
+
+}
