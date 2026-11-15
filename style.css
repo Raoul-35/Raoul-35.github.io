@@ -1,24 +1,75 @@
-/* Style général */
+/* STYLE GENERAL */
 body {
     background-color: #f5f7fb;
     color: #1f2937;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 40px;
     line-height: 1.7;
 }
 
-/* Titre principal */
-h1 {
-    color: #17365d;
-    font-size: 36px;
-    text-align: center;
+/* BARRE DE NAVIGATION */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 40px;
 }
 
-/* Paragraphes */
-p {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NOM DU PORTFOLIO */
+nav h2 {
+    color: #17365d;
+    margin: 0;
+}
+
+/* MENU */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/* LIENS */
+nav a {
+    text-decoration: none;
     color: #374151;
-    font-size: 18px;
-    line-height: 1.8;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* SECTIONS */
+section {
+    padding: 50px 40px;
+}
+
+/* TITRES */
+h1, h2 {
+    color: #17365d;
+}
+
+/* ACCUEIL */
+#accueil {
     text-align: center;
+    padding: 80px 40px;
+}
+
+/* PIED DE PAGE */
+footer {
+    background-color: #17365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    color: #ffffff;
 }
