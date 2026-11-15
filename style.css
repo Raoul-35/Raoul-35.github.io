@@ -217,6 +217,74 @@ footer p {
         font-size: 24px;
     }
 
+   /* =========================================
+   9. AMELIORATION DE LA SECTION ACCUEIL
+========================================= */
+
+#accueil h1 {
+    max-width: 950px;
+    margin: 15px auto 25px;
+    font-size: 42px;
+    line-height: 1.3;
+}
+
+.sous-titre {
+    color: #38BDF8;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+#accueil > p:not(.sous-titre) {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.actions-accueil {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.bouton-secondaire {
+    background-color: transparent;
+    border: 1px solid #38BDF8;
+    color: #38BDF8;
+}
+
+.bouton-secondaire:hover {
+    background-color: #17243A;
+    color: #FFFFFF;
+}
+
+/* Adaptation aux petits écrans */
+
+@media (max-width: 768px) {
+
+    #accueil h1 {
+        font-size: 30px;
+    }
+
+    #accueil > p:not(.sous-titre) {
+        font-size: 16px;
+    }
+
+    .actions-accueil {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actions-accueil .bouton {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
+
     .conteneur-cartes {
         grid-template-columns: 1fr;
     }
