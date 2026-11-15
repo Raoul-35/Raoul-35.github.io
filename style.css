@@ -73,3 +73,40 @@ footer {
 footer p {
     color: #ffffff;
 }
+/* CONTENEUR DES CARTES */
+.conteneur-cartes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* APPARENCE DES CARTES */
+.carte {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* TITRES DES CARTES */
+.carte h3 {
+    color: #17365d;
+    font-size: 21px;
+}
+
+/* TEXTES DES CARTES */
+.carte p {
+    color: #374151;
+    font-size: 16px;
+}
+
+/* AFFICHAGE SUR PETITS ECRANS */
+@media (max-width: 768px) {
+
+    .conteneur-cartes {
+        grid-template-columns: 1fr;
+    }
+
+}
