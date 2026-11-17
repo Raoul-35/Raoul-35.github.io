@@ -4,107 +4,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Électronique et systèmes embarqués | Portfolio</title>
+
+    <meta name="description" content="Projets en électronique et systèmes embarqués : valise de maintenance prédictive, ESP32, Arduino, acquisition de données et supervision.">
+
+    <title>Électronique et systèmes embarqués | Portfolio professionnel</title>
+
     <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Électronique et systèmes embarqués</h1>
-        <p>Conception électronique, microcontrôleurs et systèmes intelligents</p>
+<header>
 
-       <nav>
+    <h1>YOKWE Raoul Giresse</h1>
+    <p>Portfolio professionnel</p>
 
-    <a href="../../index.html">Accueil</a>
+    <nav>
 
-    <div class="menu-deroulant">
-        <a href="../../a-propos/index.html">À propos ▼</a>
+        <a href="../../index.html">Accueil</a>
 
-        <div class="sous-menu">
-            <a href="../../a-propos/profil.html">Mon profil</a>
-            <a href="../../a-propos/experiences.html">Expériences professionnelles</a>
-            <a href="../../a-propos/formations.html">Formations académiques</a>
-            <a href="../../a-propos/competences.html">Compétences techniques</a>
-            <a href="../../a-propos/certifications.html">Certifications</a>
+        <div class="menu-deroulant">
+            <a href="../../a-propos/index.html">À propos ▾</a>
+
+            <div class="sous-menu">
+                <a href="../../a-propos/profil.html">Mon profil</a>
+                <a href="../../a-propos/experiences.html">Expériences professionnelles</a>
+                <a href="../../a-propos/formations.html">Formations académiques</a>
+                <a href="../../a-propos/competences.html">Compétences techniques</a>
+                <a href="../../a-propos/certifications.html">Certifications</a>
+            </div>
         </div>
-    </div>
 
-    <div class="menu-deroulant">
-        <a href="../index.html">Projets ▼</a>
+        <div class="menu-deroulant">
+            <a href="../index.html">Projets ▾</a>
 
-        <div class="sous-menu">
-            <a href="../instrumentation/index.html">Instrumentation industrielle</a>
-            <a href="../automatisme/index.html">Automatisme industriel</a>
-            <a href="../maintenance/index.html">Gestion de maintenance</a>
-            <a href="../electronique/index.html">Électronique et systèmes embarqués</a>
+            <div class="sous-menu">
+                <a href="../instrumentation/index.html">Instrumentation industrielle</a>
+                <a href="../automatisme/index.html">Automatisme industriel</a>
+                <a href="../maintenance/index.html">Gestion de maintenance</a>
+                <a href="index.html">Électronique et systèmes embarqués</a>
+            </div>
         </div>
-    </div>
 
-    <a href="../../contact/index.html">Contact</a>
+        <a href="../../contact/index.html">Contact</a>
 
-</nav>
-    </header>
+    </nav>
 
-    <main>
+</header>
 
-        <section>
-            <h2>Présentation</h2>
+<main>
+
+    <section>
+
+        <h2>ÉLECTRONIQUE ET SYSTÈMES EMBARQUÉS</h2>
+
+        <p>
+            L'électronique et les systèmes embarqués permettent
+            de concevoir des solutions intelligentes capables
+            d'acquérir des informations, de traiter des données
+            et de commander des équipements.
+        </p>
+
+        <p>
+            Cette rubrique présente mes travaux pratiques et projets
+            personnels autour des microcontrôleurs, des capteurs,
+            de l'acquisition de données et du développement
+            de solutions électroniques appliquées à l'industrie.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Projet principal : Valise de maintenance prédictive</h2>
+
+        <div class="carte">
+
+            <h3>Conception et réalisation d'une valise de maintenance prédictive pour le diagnostic des moteurs industriels</h3>
 
             <p>
-                Cette rubrique regroupe mes travaux en électronique,
-                programmation de microcontrôleurs et conception de
-                systèmes embarqués. Elle présente des applications
-                pratiques associant matériel électronique, capteurs,
-                traitement des données et automatisation.
+                Ce projet consiste à développer un système portable
+                destiné à collecter plusieurs grandeurs physiques
+                sur des moteurs électriques industriels afin de
+                contribuer à leur surveillance et à leur diagnostic.
             </p>
-        </section>
 
-        <section>
-            <h2>Projets techniques</h2>
+            <p>
+                La solution repose sur une architecture électronique
+                autour d'un ESP32, associé à différents capteurs
+                et à une application informatique de supervision.
+            </p>
 
-            <div class="grille-projets">
+            <h3>Grandeurs physiques surveillées</h3>
 
-                <article class="carte">
-                    <h3>Valise de maintenance prédictive</h3>
+            <ul>
+                <li><strong>Courant électrique :</strong> acquisition du courant absorbé par le moteur à l'aide d'un capteur SCT-013.</li>
+                <li><strong>Vibrations :</strong> acquisition des accélérations et vibrations avec un capteur MPU6050.</li>
+                <li><strong>Température :</strong> acquisition thermique avec un capteur infrarouge matriciel AMG8833.</li>
+            </ul>
 
-                    <p>
-                        Conception d'un système portable destiné au
-                        diagnostic des moteurs électriques industriels
-                        par l'analyse des grandeurs électriques,
-                        thermiques et vibratoires.
-                    </p>
+            <h3>Architecture technique</h3>
 
-                    <p>
-                        Le projet repose notamment sur un ESP32,
-                        des capteurs de mesure et une application
-                        informatique de supervision.
-                    </p>
+            <ul>
+                <li>ESP32-WROOM-32 pour l'acquisition et le traitement initial des données.</li>
+                <li>Capteurs électriques, thermiques et vibratoires.</li>
+                <li>Communication sans fil entre la valise et l'ordinateur par point d'accès Wi-Fi.</li>
+                <li>Transmission des données par WebSocket.</li>
+                <li>Application de supervision développée avec Python et PyQt6.</li>
+                <li>Visualisation graphique et conservation de l'historique des mesures.</li>
+            </ul>
 
-                    <p>
-                        Le développement et la validation du projet
-                        seront présentés progressivement.
-                    </p>
-                </article>
+            <h3>Objectifs techniques</h3>
 
-                <article class="carte">
-                    <h3>Systèmes à base d'ESP32 et Arduino</h3>
+            <ul>
+                <li>Centraliser plusieurs mesures dans un équipement portable.</li>
+                <li>Observer l'évolution des grandeurs électriques, thermiques et vibratoires.</li>
+                <li>Faciliter l'analyse de l'état des moteurs industriels.</li>
+                <li>Constituer un historique exploitable pour le suivi des équipements.</li>
+                <li>Étudier progressivement des méthodes de détection des anomalies.</li>
+            </ul>
 
-                    <p>
-                        Étude et réalisation de systèmes électroniques
-                        embarqués intégrant des capteurs, des actionneurs
-                        et des interfaces de commande.
-                    </p>
-                </article>
+            <p>
+                Le projet est développé progressivement. Les essais
+                et validations sont réalisés au fur et à mesure
+                de l'intégration des différents composants.
+            </p>
 
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Environnement de développement</h2>
+
+        <div class="grille-projets">
+
+            <div class="carte">
+                <h3>ESP32</h3>
+
+                <p>
+                    Microcontrôleur utilisé pour l'acquisition
+                    des données, la gestion des capteurs
+                    et la communication sans fil.
+                </p>
             </div>
-        </section>
 
-    </main>
+            <div class="carte">
+                <h3>Arduino</h3>
 
-    <footer>
-        <p>© 2026 - Portfolio professionnel</p>
-    </footer>
+                <p>
+                    Environnement de développement pour
+                    l'apprentissage de la programmation
+                    des microcontrôleurs et l'expérimentation
+                    avec des composants électroniques.
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>Python et PyQt6</h3>
+
+                <p>
+                    Développement d'applications informatiques
+                    permettant de recevoir, traiter et visualiser
+                    les données issues des systèmes embarqués.
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>Communication et données</h3>
+
+                <p>
+                    Utilisation du Wi-Fi, des WebSockets
+                    et de bases de données pour assurer
+                    les échanges et la conservation des mesures.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Autres travaux en systèmes embarqués</h2>
+
+        <div class="carte">
+
+            <h3>Expérimentations Arduino et ESP32</h3>
+
+            <p>
+                Réalisation progressive de montages électroniques
+                et d'expérimentations autour des microcontrôleurs.
+            </p>
+
+            <ul>
+                <li>Connexion et exploitation de capteurs.</li>
+                <li>Acquisition de grandeurs physiques.</li>
+                <li>Commande de sorties et d'actionneurs.</li>
+                <li>Communication entre composants électroniques.</li>
+                <li>Programmation et essais de systèmes embarqués.</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Perspectives d'évolution</h2>
+
+        <p>
+            Les perspectives de développement concernent
+            l'amélioration de l'acquisition des données,
+            l'analyse des signaux, la détection des anomalies
+            et l'intégration progressive de méthodes de
+            maintenance prédictive.
+        </p>
+
+        <p>
+            L'objectif est de développer des solutions
+            électroniques et informatiques adaptées aux besoins
+            de la maintenance et du diagnostic industriel.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Explorer les autres domaines</h2>
+
+        <div class="actions-accueil">
+
+            <a href="../instrumentation/index.html" class="bouton">
+                Instrumentation industrielle
+            </a>
+
+            <a href="../automatisme/index.html" class="bouton">
+                Automatisme industriel
+            </a>
+
+            <a href="../maintenance/index.html" class="bouton bouton-secondaire">
+                Gestion de maintenance
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>© 2026 - Portfolio professionnel YOKWE Raoul Giresse</p>
+
+    <p>Automatisme | Instrumentation | Électronique | Maintenance industrielle</p>
+
+</footer>
 
 </body>
 </html>
