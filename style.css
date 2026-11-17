@@ -364,25 +364,7 @@ footer p {
 /* =====================================================
    15. ADAPTATION AUX ÉCRANS MOBILES
    ===================================================== */
-/* PORTRAIT DE LA PAGE D'ACCUEIL */
 
-.portrait-accueil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px auto;
-    max-width: 650px;
-}
-
-.portrait-accueil img {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 20px;
-    border: 2px solid #38BDF8;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
-}
 
 @media screen and (max-width: 768px) {
 
